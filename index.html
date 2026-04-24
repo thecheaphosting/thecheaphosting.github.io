@@ -1,1 +1,455 @@
-hello world
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026年便宜VPS推荐:美国VPS,香港VPS,CN2 GIA</title>
+  <style>
+    :root {
+      --bg:#f5f7fa; --surface:#ffffff; --surface2:#f0f2f5;
+      --border:#e2e8f0; --text:#1a202c; --text2:#4a5568;
+      --accent:#2563eb; --accent-hover:#1d4ed8; --accent-light:#eff6ff;
+      --shadow:0 2px 12px rgba(0,0,0,.08); --shadow-lg:0 8px 32px rgba(0,0,0,.12);
+      --radius:12px; --nav-h:64px;
+    }
+    [data-theme="dark"] {
+      --bg:#0f172a; --surface:#1e293b; --surface2:#263044; --border:#334155;
+      --text:#f1f5f9; --text2:#94a3b8; --accent:#3b82f6; --accent-hover:#60a5fa;
+      --accent-light:#1e3a5f; --shadow:0 2px 12px rgba(0,0,0,.3); --shadow-lg:0 8px 32px rgba(0,0,0,.4);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);transition:background .3s,color .3s;line-height:1.7}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{color:var(--accent-hover);text-decoration:underline}
+
+    /* ── Navbar ── */
+    .navbar{position:sticky;top:0;z-index:100;height:var(--nav-h);background:var(--surface);border-bottom:1px solid var(--border);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;padding:0 24px;gap:16px}
+    .navbar-brand{font-size:1.05rem;font-weight:700;color:var(--accent);white-space:nowrap}
+    .navbar-menu{display:flex;gap:4px;align-items:center;list-style:none}
+    .navbar-menu a{display:block;padding:6px 14px;border-radius:8px;font-size:.9rem;font-weight:500;color:var(--text2);transition:background .2s,color .2s;white-space:nowrap}
+    .navbar-menu a:hover{background:var(--accent-light);color:var(--accent);text-decoration:none}
+    .theme-switcher{display:flex;gap:4px;align-items:center;background:var(--surface2);border-radius:20px;padding:3px;border:1px solid var(--border);flex-shrink:0}
+    .theme-btn{background:none;border:none;cursor:pointer;padding:4px 10px;border-radius:16px;font-size:.78rem;color:var(--text2);transition:background .2s,color .2s;white-space:nowrap}
+    .theme-btn.active{background:var(--accent);color:#fff}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:.3s}
+    .mobile-menu{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:var(--surface);border-bottom:1px solid var(--border);box-shadow:var(--shadow-lg);z-index:99;padding:12px 20px 20px}
+    .mobile-menu.open{display:block}
+    .mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:4px}
+    .mobile-menu a{display:block;padding:10px 14px;border-radius:8px;font-size:.95rem;color:var(--text2);transition:background .2s,color .2s}
+    .mobile-menu a:hover{background:var(--accent-light);color:var(--accent);text-decoration:none}
+    .mobile-theme{display:flex;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
+    .mobile-theme .theme-btn{flex:1;padding:8px;font-size:.85rem;border-radius:8px;background:var(--surface2);border:1px solid var(--border)}
+    .mobile-theme .theme-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+    /* ── Hero ── */
+    .hero{background:linear-gradient(135deg,#1d4ed8 0%,#0ea5e9 100%);color:#fff;padding:60px 24px;text-align:center}
+    [data-theme="dark"] .hero{background:linear-gradient(135deg,#1e3a5f 0%,#0c4a6e 100%)}
+    .hero h1{font-size:clamp(1.6rem,4vw,2.6rem);font-weight:800;margin-bottom:14px}
+    .hero p{font-size:1rem;opacity:.9;max-width:640px;margin:0 auto;line-height:1.8}
+
+    /* ── Layout ── */
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .main-content{padding:40px 0 80px}
+    .section{margin-bottom:48px}
+    .section-title{font-size:1.2rem;font-weight:700;color:var(--text);border-left:4px solid var(--accent);padding-left:14px;margin-bottom:20px}
+
+    /* ── Search bar ── */
+    .search-wrap{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+    .search-wrap input{flex:1;min-width:220px;padding:11px 18px 11px 42px;border-radius:10px;border:1.5px solid var(--border);background:var(--surface);color:var(--text);font-size:.92rem;outline:none;transition:border .2s,box-shadow .2s;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.868-3.833zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:14px center}
+    .search-wrap input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(37,99,235,.15)}
+    .search-wrap input::placeholder{color:var(--text2)}
+    .search-count{font-size:.82rem;color:var(--text2);white-space:nowrap;padding:6px 12px;background:var(--surface2);border-radius:20px;border:1px solid var(--border)}
+    .search-clear{padding:8px 16px;border-radius:8px;border:1.5px solid var(--border);background:var(--surface);color:var(--text2);cursor:pointer;font-size:.83rem;transition:background .2s,color .2s;white-space:nowrap}
+    .search-clear:hover{background:var(--accent-light);color:var(--accent);border-color:var(--accent)}
+
+    /* ── Table ── */
+    .table-wrap{overflow-x:auto;border-radius:var(--radius);box-shadow:var(--shadow)}
+    table{width:100%;border-collapse:collapse;background:var(--surface);font-size:.875rem}
+    thead tr{background:var(--accent);color:#fff}
+    th{padding:13px 14px;text-align:left;font-weight:600;white-space:nowrap}
+    td{padding:11px 14px;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:middle}
+    tr:last-child td{border-bottom:none}
+    tbody tr:hover{background:var(--accent-light)}
+    tbody tr.highlight td{background:rgba(37,99,235,.06)}
+    .badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:.75rem;font-weight:600;background:var(--accent-light);color:var(--accent)}
+    .btn-go{display:inline-block;padding:5px 14px;border-radius:6px;background:var(--accent);color:#fff;font-size:.8rem;font-weight:600;transition:background .2s;white-space:nowrap}
+    .btn-go:hover{background:var(--accent-hover);color:#fff;text-decoration:none}
+    .no-result{text-align:center;padding:48px 20px;color:var(--text2);font-size:.95rem;background:var(--surface)}
+    .no-result .icon{font-size:2.5rem;display:block;margin-bottom:12px}
+    mark{background:rgba(37,99,235,.2);color:var(--text);border-radius:3px;padding:0 2px}
+
+    /* ── FAQ cards ── */
+    .faq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .faq-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow);transition:box-shadow .2s,transform .2s}
+    .faq-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+    .faq-card h3{font-size:.95rem;font-weight:700;color:var(--accent);margin-bottom:10px}
+    .faq-card p{font-size:.875rem;color:var(--text2);line-height:1.7}
+
+    /* ── Article cards ── */
+    .articles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .article-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);transition:box-shadow .2s,transform .2s}
+    .article-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+    .article-card h3{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:8px}
+    .article-card p{font-size:.82rem;color:var(--text2);line-height:1.6}
+
+    /* ── Tags ── */
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{padding:5px 14px;border-radius:20px;font-size:.8rem;background:var(--surface2);border:1px solid var(--border);color:var(--text2);cursor:default;transition:background .2s,color .2s}
+    .tag:hover{background:var(--accent-light);color:var(--accent)}
+
+    /* ── Stats ── */
+    .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-bottom:40px}
+    .stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);text-align:center}
+    .stat-card .num{font-size:1.9rem;font-weight:800;color:var(--accent)}
+    .stat-card .lbl{font-size:.78rem;color:var(--text2);margin-top:4px}
+
+    /* ── Back to top ── */
+    #back-to-top{position:fixed;bottom:28px;right:24px;z-index:200;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;border:none;cursor:pointer;font-size:1.3rem;box-shadow:var(--shadow-lg);opacity:0;pointer-events:none;transition:opacity .3s,transform .3s,background .2s;display:flex;align-items:center;justify-content:center}
+    #back-to-top.visible{opacity:1;pointer-events:auto}
+    #back-to-top:hover{background:var(--accent-hover);transform:translateY(-3px)}
+
+    footer{background:var(--surface);border-top:1px solid var(--border);text-align:center;padding:24px;font-size:.83rem;color:var(--text2)}
+
+    @media(max-width:768px){
+      .navbar-menu,.theme-switcher{display:none}
+      .hamburger{display:flex}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ Navbar ══ -->
+<nav class="navbar">
+  <div class="navbar-brand">🇭🇰 香港VPS推荐</div>
+  <ul class="navbar-menu">
+    <li><a href="#vps-list">VPS列表</a></li>
+    <li><a href="#faq">常见问题</a></li>
+    <li><a href="#articles">相关文章</a></li>
+    <li><a href="#tags">标签</a></li>
+  </ul>
+  <div class="theme-switcher">
+    <button class="theme-btn" data-tv="auto"   onclick="setTheme('auto')">🖥 自动</button>
+    <button class="theme-btn" data-tv="light"  onclick="setTheme('light')">☀️ 浅色</button>
+    <button class="theme-btn" data-tv="dark"   onclick="setTheme('dark')">🌙 深色</button>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="菜单">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══ Mobile Menu ══ -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#vps-list" onclick="closeMenu()">VPS列表</a></li>
+    <li><a href="#faq"      onclick="closeMenu()">常见问题</a></li>
+    <li><a href="#articles" onclick="closeMenu()">相关文章</a></li>
+    <li><a href="#tags"     onclick="closeMenu()">标签云</a></li>
+  </ul>
+  <div class="mobile-theme">
+    <button class="theme-btn" data-tv="auto"  onclick="setTheme('auto')">🖥 自动</button>
+    <button class="theme-btn" data-tv="light" onclick="setTheme('light')">☀️ 浅色</button>
+    <button class="theme-btn" data-tv="dark"  onclick="setTheme('dark')">🌙 深色</button>
+  </div>
+</div>
+
+<!-- ══ Hero ══ -->
+<section class="hero">
+  <h1>便宜香港VPS推荐</h1>
+  <p>专注香港数据中心VPS测评，涵盖价格、速度、线路、支付方式等维度，助您找到最适合的香港主机方案</p>
+</section>
+
+<!-- ══ Main ══ -->
+<main class="main-content">
+  <div class="container">
+
+    <!-- Stats -->
+    <div class="stat-grid">
+      <div class="stat-card"><div class="num">52+</div><div class="lbl">收录商家</div></div>
+      <div class="stat-card"><div class="num">CN2 GIA</div><div class="lbl">顶级线路</div></div>
+      <div class="stat-card"><div class="num">¥10</div><div class="lbl">最低月付</div></div>
+      <div class="stat-card"><div class="num">持续</div><div class="lbl">更新维护</div></div>
+    </div>
+
+    <!-- VPS List -->
+    <section class="section" id="vps-list">
+      <div class="section-title">香港VPS推荐列表</div>
+
+      <!-- Search bar -->
+      <div class="search-wrap">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="搜索商家名称、节点、线路、支付方式..."
+          oninput="filterTable()"
+          autocomplete="off"
+        />
+        <span class="search-count" id="searchCount">共 52 条</span>
+        <button class="search-clear" onclick="clearSearch()">✕ 清空</button>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>商家名称</th>
+              <th>主要节点 / 机房</th>
+              <th>支付方式</th>
+              <th>价格参考</th>
+              <th>前往</th>
+            </tr>
+          </thead>
+          <tbody id="vps-tbody"></tbody>
+        </table>
+        <div class="no-result" id="noResult" style="display:none">
+          <span class="icon">🔍</span>
+          没有找到匹配的商家，换个关键词试试？
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="section-title">常见问题解答</div>
+      <div class="faq-grid">
+        <div class="faq-card">
+          <h3>🚀 哪一家VPS最快？</h3>
+          <p>搬瓦工接驳中国最快的CN2 GIA线路，高达1G带宽，可解锁大多数流媒体，深受广大开发者喜爱。</p>
+        </div>
+        <div class="faq-card">
+          <h3>💰 哪一家VPS最便宜？</h3>
+          <p>狗云最低仅需10元/月，适合白嫖族和线路测试，但速度相对一般，需有心理准备。</p>
+        </div>
+        <div class="faq-card">
+          <h3>🌐 哪一家适合建站？</h3>
+          <p>恒创科技适合企业站，Sugarhosts适合流量站，共享云虚拟主机386元/年可托管20多个站点。</p>
+        </div>
+        <div class="faq-card">
+          <h3>⚡ 哪家支持CN2 GIA线路？</h3>
+          <p>搬瓦工、野草云、LightNode、DMIT、恒创科技等均声称接驳香港CN2 GIA线路，建议实测验证。</p>
+        </div>
+        <div class="faq-card">
+          <h3>🔧 哪家支持安装V2Ray？</h3>
+          <p>列表中绝大多数商家均支持安装V2Ray，建议选择搬瓦工等注重用户隐私的服务商平台。</p>
+        </div>
+        <div class="faq-card">
+          <h3>📋 综合推荐？</h3>
+          <p>追求速度选搬瓦工，价格便宜选狗云，建站选恒创科技/腾讯云/LightNode，长期稳定选大厂云。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles -->
+    <section class="section" id="articles">
+      <div class="section-title">推荐阅读</div>
+      <div class="articles-grid">
+        <div class="article-card">
+          <h3>优质线路香港VPS（约25元）</h3>
+          <p>优质线路提供更低延迟、更高稳定性，对比普通互联网连接优势明显，适合对速度有要求的用户。</p>
+        </div>
+        <div class="article-card">
+          <h3>20元以下便宜香港VPS汇总</h3>
+          <p>精选月付20元以下香港VPS，对个人站长和中小企业来说租用香港VPS搭建网站性价比极高。</p>
+        </div>
+        <div class="article-card">
+          <h3>香港云服务器推荐（CN2线路）</h3>
+          <p>深度讲解香港CN2、BGP、CN2 GIA线路区别，并比较知名香港CN2线路主机商的综合表现。</p>
+        </div>
+        <div class="article-card">
+          <h3>香港CN2 GIA优质线路VPS推荐</h3>
+          <p>CN2 GIA是香港直连大陆的顶配线路，拥有最高弹性、高冗余和低延迟的卓越中国直连体验。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tags -->
+    <section class="section" id="tags">
+      <div class="section-title">相关标签</div>
+      <div class="tags">
+        <span class="tag">香港虚拟主机</span>
+        <span class="tag">香港云服务器CN2</span>
+        <span class="tag">香港云服务器免备案</span>
+        <span class="tag">香港云服务器</span>
+        <span class="tag">大带宽香港独立服务器</span>
+        <span class="tag">大带宽香港云服务器</span>
+        <span class="tag">大带宽香港服务器</span>
+        <span class="tag">香港VPS租用</span>
+        <span class="tag">香港VPS价格</span>
+        <span class="tag">香港VPS托管</span>
+        <span class="tag">便宜香港VPS</span>
+        <span class="tag">香港VPS推荐</span>
+        <span class="tag">香港VPS服务器</span>
+        <span class="tag">大带宽香港VPS</span>
+        <span class="tag">CN2 GIA线路</span>
+        <span class="tag">V2Ray脚本</span>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 VPS推荐 &nbsp;|&nbsp; 专注VPS主机测评与推荐</p>
+</footer>
+
+<!-- Back to top -->
+<button id="back-to-top" onclick="scrollToTop()" title="返回顶部">↑</button>
+
+<script>
+// ══════════════════════════════════════
+//  VPS DATA
+// ══════════════════════════════════════
+const vpsData = [
+  {id:1,  name:"搬瓦工 BandwagonHost",       nodes:"香港（部分套餐）、洛杉矶 CN2 GIA、纽约、荷兰等", pay:"支付宝 / 银联 / PayPal / Visa",            price:"$49.99/年起（香港套餐约$10–20/月）"},
+  {id:2,  name:"DogYun 狗云",                nodes:"香港、澳大利亚、韩国、日本、俄罗斯、美国等",     pay:"支付宝 / 微信 / 银联",                      price:"约¥10–50/月"},
+  {id:3,  name:"萤光云 YGCloud",             nodes:"香港、中国内地、东南亚、中东、欧美多节点",        pay:"支付宝 / 微信",                              price:"约$6.77/月起"},
+  {id:4,  name:"野草云",                     nodes:"香港、美国西海岸等",                              pay:"支付宝 / 银联 / Stripe / PayPal",           price:"约¥38/月起"},
+  {id:5,  name:"恒创科技 HengHost",          nodes:"香港、日本、韩国、美国等",                        pay:"支付宝 / 银联 / PayPal",                    price:"年付约¥296起"},
+  {id:6,  name:"HostYun",                    nodes:"香港、日本、美国、韩国等",                        pay:"支付宝 / 银联",                              price:"约¥20–100/月"},
+  {id:7,  name:"LightNode",                  nodes:"香港、韩国、泰国、越南、新加坡、中东、欧美等",    pay:"支付宝 / 信用卡 / PayPal / 银联",           price:"约$7–20/月（按小时计费）"},
+  {id:8,  name:"RAKsmart",                   nodes:"香港、美国、韩国、日本",                          pay:"加密货币 / 支付宝 / PayPal / 信用卡",       price:"香港入门约$5–15/月"},
+  {id:9,  name:"DMIT",                       nodes:"香港、东京、洛杉矶、圣何塞",                      pay:"支付宝 / 信用卡 / PayPal / 银联",           price:"约$6.9/月起"},
+  {id:10, name:"DIYVM",                      nodes:"香港、美国、日本",                                pay:"支付宝 / 微信",                              price:"香港机型约¥50/月起"},
+  {id:11, name:"HostKVM",                    nodes:"香港、日本、新加坡、美国、韩国、俄罗斯等",        pay:"支付宝 / PayPal",                           price:"常见档$7–15/月"},
+  {id:12, name:"硅云 VPSOR",                nodes:"香港、新加坡、东京、硅谷、法兰克福等",            pay:"支付宝 / 微信 / 银联",                      price:"年付约¥238起"},
+  {id:13, name:"新天域互联 Simcentric",      nodes:"香港本地多机房、台湾",                            pay:"支付宝 / 银联 / 信用卡 / 加密货币",         price:"多为千元/月级别"},
+  {id:14, name:"JTTI",                       nodes:"香港、美国、新加坡等",                            pay:"支付宝 / 银联 / PayPal / USDT",             price:"香港机型约$8/月起"},
+  {id:15, name:"Hawk Host",                  nodes:"香港、新加坡、洛杉矶、荷兰等",                    pay:"信用卡 / PayPal",                           price:"约$5–15/月"},
+  {id:16, name:"Kamatera",                   nodes:"香港、东京、纽约、伦敦等全球节点",                pay:"信用卡 / PayPal",                           price:"入门约$4–12/月"},
+  {id:17, name:"HostUS",                     nodes:"香港、美国、英国、荷兰等",                        pay:"PayPal / 信用卡 / 加密货币",                price:"香港套餐约$6–15/月"},
+  {id:18, name:"KoDDoS",                     nodes:"香港、荷兰等高防机房",                            pay:"信用卡 / PayPal / 加密货币",                price:"香港高防VPS约$20+/月"},
+  {id:19, name:"UltaHost",                   nodes:"香港、美国、欧洲多机房",                          pay:"信用卡 / PayPal / 加密货币",                price:"香港VPS约$5–20/月"},
+  {id:20, name:"TheServerHost",              nodes:"香港、新加坡、美国等",                            pay:"信用卡 / PayPal",                           price:"香港VPS约$10+/月"},
+  {id:21, name:"Asia.Cloud",                 nodes:"香港、新加坡、日本、美国等",                      pay:"信用卡 / PayPal",                           price:"香港云服务器约$20+/月"},
+  {id:22, name:"HostZealot",                 nodes:"香港、荷兰、美国、俄罗斯等",                      pay:"信用卡 / PayPal / 加密货币",                price:"香港VPS约$6+/月"},
+  {id:23, name:"31IDC",                      nodes:"香港、美国、韩国等",                              pay:"支付宝 / 网银 / 银联",                      price:"香港VPS约¥60+/月"},
+  {id:24, name:"HostEase",                   nodes:"香港、美国等",                                    pay:"信用卡 / PayPal",                           price:"香港VPS约$11.9/月起"},
+  {id:25, name:"AsiaVPS / GigsGigsCloud",    nodes:"香港、新加坡、日本、马来西亚等",                  pay:"信用卡 / PayPal",                           price:"香港KVM VPS约$18/年"},
+  {id:26, name:"PureVoltage",                nodes:"香港、洛杉矶、纽约等",                            pay:"信用卡 / PayPal",                           price:"香港VPS/独服定制报价"},
+  {id:27, name:"华为云 Hong Kong",           nodes:"香港区域云服务器 / ECS",                         pay:"信用卡 / 借记卡 / 本地支付",               price:"入门云服务器约¥30+/月"},
+  {id:28, name:"腾讯云 Hong Kong",           nodes:"香港 CVM / 轻量应用服务器",                      pay:"微信 / 支付宝 / 银联 / 信用卡",             price:"约¥30+/月"},
+  {id:29, name:"阿里云 Hong Kong",           nodes:"香港 ECS 云服务器",                              pay:"支付宝 / 信用卡 / 银联",                    price:"入门配置约¥20–60/月"},
+  {id:30, name:"UCloud 香港",               nodes:"香港、首尔、新加坡等",                            pay:"信用卡 / 对公转账",                         price:"轻量云主机约¥20+/月"},
+  {id:31, name:"青云 QingCloud",             nodes:"北京、上海、广东、香港等",                        pay:"支付宝 / 微信 / 对公转账",                  price:"通用云主机约¥30+/月"},
+  {id:32, name:"CITIC Telecom CPC",          nodes:"以香港为核心，覆盖亚太与欧洲多机房",              pay:"企业合同 / 信用卡",                         price:"按需定制报价"},
+  {id:33, name:"GreenCloudVPS 绿云",         nodes:"香港、日本、美国、欧洲多机房",                    pay:"信用卡 / PayPal / 加密货币",                price:"香港VPS约$8+/月"},
+  {id:34, name:"ServerZone",                 nodes:"香港、美国、荷兰等",                              pay:"信用卡 / PayPal",                           price:"香港VPS约$10+/月"},
+  {id:35, name:"Exabytes",                   nodes:"香港、新加坡、马来西亚等",                        pay:"信用卡 / PayPal",                           price:"香港VPS约$7–20/月"},
+  {id:36, name:"Cloudzy",                    nodes:"香港、新加坡、美国、欧洲等",                      pay:"信用卡 / PayPal / 加密货币",                price:"香港VPS约$7+/月"},
+  {id:37, name:"OneTechCloud 易科云",        nodes:"香港、日本、美国等（部分CN2线路）",               pay:"支付宝 / 微信 / PayPal",                    price:"香港VPS约¥66/月起"},
+  {id:38, name:"BageVM",                     nodes:"香港、东京、新加坡、洛杉矶等",                    pay:"支付宝 / USDT / 信用卡",                   price:"香港VPS约$5–20/月"},
+  {id:39, name:"VPSHosting 香港",            nodes:"香港本地数据中心",                                pay:"信用卡 / PayPal",                           price:"香港KVM VPS约$10+/月"},
+  {id:40, name:"HOSTKEY",                    nodes:"香港、荷兰、冰岛、美国等",                        pay:"信用卡 / PayPal / 加密货币",                price:"香港VPS/独服约$10+/月"},
+  {id:41, name:"BlueVPS",                    nodes:"香港、伦敦、阿姆斯特丹等",                        pay:"信用卡 / PayPal / 加密货币",                price:"香港VPS约$7+/月"},
+  {id:42, name:"MonoVM",                     nodes:"香港、美国、欧洲等",                              pay:"信用卡 / PayPal / 比特币",                  price:"香港VPS约$16.99/月起"},
+  {id:43, name:"PQ.Hosting",                 nodes:"香港、德国、荷兰等",                              pay:"信用卡 / PayPal / 加密货币",                price:"香港VPS约€4.77/月起"},
+  {id:44, name:"Shinjiru",                   nodes:"香港、马来西亚、欧洲等（隐私保护）",              pay:"信用卡 / PayPal / 比特币",                  price:"香港VPS约$10+/月"},
+  {id:45, name:"ScalaHosting",               nodes:"香港（合作机房）、美国、欧盟",                    pay:"信用卡 / PayPal",                           price:"云VPS约$10+/月"},
+  {id:46, name:"KowloonHosting",             nodes:"香港本地 IDC",                                   pay:"信用卡 / PayPal",                           price:"香港VPS约$10+/月"},
+  {id:47, name:"is*hosting",                 nodes:"香港、荷兰、美国等",                              pay:"信用卡 / PayPal / 加密货币",                price:"香港VPS约$5–15/月"},
+  {id:48, name:"Nexril",                     nodes:"香港、洛杉矶、达拉斯等",                          pay:"信用卡 / PayPal / 加密货币",                price:"香港VPS约$8+/月"},
+  {id:49, name:"Vultr",                      nodes:"香港、新加坡、东京、洛杉矶等",                    pay:"信用卡 / PayPal / 加密货币",                price:"Cloud Compute约$5/月起"},
+  {id:50, name:"Navicosoft",                 nodes:"香港、伦敦等",                                    pay:"信用卡 / PayPal",                           price:"香港VPS约$10+/月"},
+  {id:51, name:"EDIS Global",                nodes:"香港葵涌、奥地利、德国等",                        pay:"信用卡 / PayPal / 加密货币",                price:"香港KVM VPS约€7.99/月起"},
+  {id:52, name:"VPSServer",                  nodes:"香港、伦敦、纽约等",                              pay:"信用卡 / PayPal",                           price:"香港VPS约$4.99/月起"},
+];
+
+// ══════════════════════════════════════
+//  SEARCH & RENDER
+// ══════════════════════════════════════
+const tbody     = document.getElementById("vps-tbody");
+const noResult  = document.getElementById("noResult");
+const countEl   = document.getElementById("searchCount");
+const inputEl   = document.getElementById("searchInput");
+
+function highlight(text, q) {
+  if (!q) return text;
+  const reg = new RegExp(`(${q.replace(/[.*+?^${}()|[\\]\\\\]/g,"\\\\$&")})`, "gi");
+  return text.replace(reg, "<mark>$1</mark>");
+}
+
+function renderRows(data, q) {
+  tbody.innerHTML = "";
+  if (data.length === 0) {
+    noResult.style.display = "block";
+    countEl.textContent = "共 0 条";
+    return;
+  }
+  noResult.style.display = "none";
+  countEl.textContent = `共 ${data.length} 条`;
+  data.forEach(v => {
+    const tr = document.createElement("tr");
+    if (q) tr.classList.add("highlight");
+    tr.innerHTML = `
+      <td><span class="badge">${String(v.id).padStart(2,"0")}</span></td>
+      <td style="font-weight:600;color:var(--text);min-width:160px">${highlight(v.name, q)}</td>
+      <td style="font-size:.82rem">${highlight(v.nodes, q)}</td>
+      <td style="font-size:.82rem">${highlight(v.pay, q)}</td>
+      <td style="color:var(--accent);font-weight:600;font-size:.82rem;white-space:nowrap">${v.price}</td>
+      <td><a class="btn-go" href="#" onclick="return false;">前往 →</a></td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+function filterTable() {
+  const q = inputEl.value.trim().toLowerCase();
+  if (!q) { renderRows(vpsData, ""); return; }
+  const result = vpsData.filter(v =>
+    v.name.toLowerCase().includes(q) ||
+    v.nodes.toLowerCase().includes(q) ||
+    v.pay.toLowerCase().includes(q) ||
+    v.price.toLowerCase().includes(q)
+  );
+  renderRows(result, q);
+}
+
+function clearSearch() {
+  inputEl.value = "";
+  renderRows(vpsData, "");
+  inputEl.focus();
+}
+
+// Init render
+renderRows(vpsData, "");
+
+// ══════════════════════════════════════
+//  THEME
+// ══════════════════════════════════════
+function applyTheme(val) {
+  const isDark = val === "auto"
+    ? window.matchMedia("(prefers-color-scheme:dark)").matches
+    : val === "dark";
+  document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
+  document.querySelectorAll("[data-tv]").forEach(b =>
+    b.classList.toggle("active", b.getAttribute("data-tv") === val)
+  );
+}
+function setTheme(val) {
+  localStorage.setItem("theme", val);
+  applyTheme(val);
+  closeMenu();
+}
+applyTheme(localStorage.getItem("theme") || "auto");
+window.matchMedia("(prefers-color-scheme:dark)").addEventListener("change", () => {
+  if ((localStorage.getItem("theme") || "auto") === "auto") applyTheme("auto");
+});
+
+// ══════════════════════════════════════
+//  MOBILE MENU
+// ══════════════════════════════════════
+function toggleMenu() { document.getElementById("mobileMenu").classList.toggle("open"); }
+function closeMenu()  { document.getElementById("mobileMenu").classList.remove("open"); }
+
+// ══════════════════════════════════════
+//  BACK TO TOP
+// ══════════════════════════════════════
+const bttBtn = document.getElementById("back-to-top");
+window.addEventListener("scroll", () => {
+  bttBtn.classList.toggle("visible", window.scrollY > 300);
+});
+function scrollToTop() { window.scrollTo({ top: 0, behavior: "smooth" }); }
+</script>
+</body>
+</html>
